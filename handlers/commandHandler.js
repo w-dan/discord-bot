@@ -1,3 +1,9 @@
+/************************************************/
+/*               COMMAND HANDLER                 /
+/* checks commands folder for javascript files   /
+/* adds them to commands collection              /
+/************************************************/
+
 const fs = require('fs');
 
 module.exports = (client, discord) => {
@@ -6,7 +12,7 @@ module.exports = (client, discord) => {
     fs.readdirSync("./commands/").forEach((dir) => {
         const commands = fs
           .readdirSync(`./commands/${dir}`)
-          .filter((file) => file.endsWith(".js"));        // array with all .js files
+          .filter((file) => file.endsWith('.js'));        // filter .js files
         
         // check every route in directory
         for (const file of commands) {

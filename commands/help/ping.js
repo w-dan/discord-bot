@@ -1,3 +1,9 @@
+/********************************************** */
+/*                    ping                       /
+/* test command                                  /
+/* amswers 'PONG'                                /
+/************************************************/
+
 module.exports = {
     name: "ping",
     description: "Response time",

@@ -1,4 +1,11 @@
-const discord = require("discord.js");
+/************************************************/
+/*               	MAIN 		                 /
+/* client instance, create intents				 /
+/* creates commands and events collections	     /
+/* client login						             /
+/************************************************/
+
+const discord = require('discord.js');
 const { token } = require('./config/config.json');
 
 // new client instance
