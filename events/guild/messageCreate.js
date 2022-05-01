@@ -1,3 +1,7 @@
+/********************************************** */
+/* checks message for valid prefix and command   /
+/* fetches and executes command                  /
+/************************************************/
 const { prefix } = require('../../config/config.json');
 
 module.exports = async(client, discord, message) => {
@@ -7,7 +11,7 @@ module.exports = async(client, discord, message) => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
     
-    // get command set in command handler
+    // fetch command
     const command = client.commands.get(cmd);
     
     // mind arguments order, keep them as in command file
